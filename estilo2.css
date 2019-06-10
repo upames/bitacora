@@ -1,0 +1,126 @@
+body{
+  margin: 0;
+  background-color: #FFFFFF;
+  padding: 0px;
+  font-family: Arial;
+}
+
+form{
+padding: 80px ;
+
+}
+
+nav{
+  width: 100%;
+  background: #247BE6;
+}
+
+ul{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+
+}
+
+
+ul li{
+  display: inline-block;
+}
+
+ul li a{
+  color: white;
+  display: block;
+  padding: 15px 40px;
+  text-decoration: none;
+}
+
+ul li a:hover{
+  background-color: #9AA9F8;
+}
+
+/*
+form{
+padding: 30px ;
+}
+
+#menu{
+
+  background-color: #4764F6;
+  width: 100%;
+
+
+
+}
+
+#menu ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li{
+  display: inline-block;
+}
+
+#menu ul li a{
+  color: white;
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+#menu ul li a:hover{
+  background-color: #9AA9F8;
+}
+
+.item-r{
+  float: right;
+}
+*/
+
+#login {
+ width: 300px;
+ position: absolute;
+ left: 700px;
+ top: 8px;
+ z-index: 100;
+ float: right;
+}
+
+#abierto {
+ margin: 0;
+ cursor: pointer;
+ background: #247BE6  url(imgs/open.png) no-repeat 8px 7px;
+ color: #FFFFFF;
+ padding: 5px 0 2px 30px;
+}
+
+#login .cerrado {
+ background-image:url(imgs/close.png);
+ background-color: #247BE6;
+}
+
+#abierto:hover {
+ color: rgb(0,0,0);
+ background-color: #247BE6
+}
+
+#login form {
+ padding: 10px 10px 10px 10px;
+ display: none;
+ background-color: #95AEB4;
+}
+#login label {
+ display: inline-block;
+ width: 100px;
+ text-align:right;
+ margin: 0 15px 0 0;
+ color: rgb(58,80,123;
+}
+#login input {
+ font-size: 14px;
+}
+#login #boton {
+ margin-left: 50px;
+}
