@@ -21,6 +21,7 @@
                <li><a href="registroProducto.php">Registrar Productos</a></li>
                 <li><a href="buscarProducto.php">Buscar Producto</a></li>
                 <li><a href="sesionCodigoBarras.php">Sesiòn con codigo</a></li>
+                <li><a href="bitacora.php">Entrar a bitacora</a></li>
            </ul>
          </div>
        </div>
