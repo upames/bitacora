@@ -24,11 +24,11 @@
    <input type="text" name="entrada" align="center" size="50" placeholder="Ingrese entrada" required><br><br>
    <input type="text" name="salida" align="center" size="50" placeholder="Ingrese salida" required><br><br>
 
-   <select>
+   <select name="prueba2">
      <?php
        $consulta = "SELECT * FROM prueba";
 
-       $conexion=mysqli_connect("localhost","root","toor","bitacora") or
+       $conexion=mysqli_connect("localhost","root","","bitacora") or
         die("Problemas en la conexión");
         $respuesta= mysqli_query($conexion,$consulta)or die("Problemas en el select".mysqli_error($conexion));
 
@@ -48,11 +48,11 @@
 
    </select>
 
-   <select>
+   <select name="modulo2">
      <?php
        $consulta1 = "SELECT * FROM modulo";
 
-       $conexion1=mysqli_connect("localhost","root","toor","bitacora") or
+       $conexion1=mysqli_connect("localhost","root","","bitacora") or
         die("Problemas en la conexión");
         $respuesta1= mysqli_query($conexion1,$consulta1)or die("Problemas en el select".mysqli_error($conexion1));
 
