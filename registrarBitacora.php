@@ -20,7 +20,7 @@
    <input type="text" name="codigo"  align="center" size="50" placeholder="Codigo" required><br><br>
    <input type="text" name="titulo"  align="center" size="50" placeholder="Ingrese titulo" required><br><br>
    <input type="text" name="autor" align="center" size="50" placeholder="Ingrese autor" required><br><br>
-   <input type="text" name="fecha" align="center" size="50" placeholder="Ingrese fecha" required><br><br>
+   <input class="col-md-6 form-control" type="date" name="fecha" align="center" size="50" required/><br><br>
    <input type="text" name="entrada" align="center" size="50" placeholder="Ingrese entrada" required><br><br>
    <input type="text" name="salida" align="center" size="50" placeholder="Ingrese salida" required><br><br>
 
@@ -28,7 +28,7 @@
      <?php
        $consulta = "SELECT * FROM prueba";
 
-       $conexion=mysqli_connect("localhost","root","","bitacora") or
+       $conexion=mysqli_connect("localhost","root","toorgarita","bitacora") or
         die("Problemas en la conexión");
         $respuesta= mysqli_query($conexion,$consulta)or die("Problemas en el select".mysqli_error($conexion));
 
@@ -52,7 +52,7 @@
      <?php
        $consulta1 = "SELECT * FROM modulo";
 
-       $conexion1=mysqli_connect("localhost","root","","bitacora") or
+       $conexion1=mysqli_connect("localhost","root","toorgarita","bitacora") or
         die("Problemas en la conexión");
         $respuesta1= mysqli_query($conexion1,$consulta1)or die("Problemas en el select".mysqli_error($conexion1));
 

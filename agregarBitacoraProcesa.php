@@ -9,17 +9,16 @@ $salida= $_POST['salida'];
 $prueba= $_POST['prueba2'];
 $modulo= $_POST['modulo2'];
 
-$conexion=mysqli_connect("localhost","root","","bitacora") or
+$conexion=mysqli_connect("localhost","root","toorgarita","bitacora") or
         die("Problemas en la conexión");
         mysqli_query($conexion,"INSERT INTO modificaciones(codigo,titulo,autor,fecha,entrada,salida,id_prueba,id_modulo)
-        values('$_REQUEST[codigo]','$_REQUEST[usuario]','$_REQUEST[correo]','$passeordE')")or die("Problemas en el select".mysqli_error($conexion));
+        values('$codigo','$titulo','$autor','$fecha','$entrada','$salida','$prueba','$modulo')")or die("Problemas en el select".mysqli_error($conexion));
 mysqli_close($conexion);
 
-$mensaje = "El usuario fue dado de alta: ";
+$mensaje = "Se agregaron los datos";
 echo "<script>";
 echo "alert('$mensaje');";
-echo "window.location = 'index.php';";
+echo "window.location = 'registrarBitacora.php';";
 echo "</script>";
-
 
  ?>
