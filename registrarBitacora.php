@@ -28,7 +28,7 @@
      <?php
        $consulta = "SELECT * FROM prueba";
 
-       $conexion=mysqli_connect("localhost","root","","bitacora") or
+       $conexion=mysqli_connect("localhost","root","toor","bitacora") or
         die("Problemas en la conexión");
         $respuesta= mysqli_query($conexion,$consulta)or die("Problemas en el select".mysqli_error($conexion));
 
@@ -52,7 +52,7 @@
      <?php
        $consulta1 = "SELECT * FROM modulo";
 
-       $conexion1=mysqli_connect("localhost","root","","bitacora") or
+       $conexion1=mysqli_connect("localhost","root","toor","bitacora") or
         die("Problemas en la conexión");
         $respuesta1= mysqli_query($conexion1,$consulta1)or die("Problemas en el select".mysqli_error($conexion1));
 
