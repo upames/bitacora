@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
--- https://www.phpmyadmin.net/
+-- version 4.5.2
+-- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 13-06-2019 a las 18:04:41
--- Versión del servidor: 8.0.14
--- Versión de PHP: 7.1.23
+-- Tiempo de generación: 17-06-2019 a las 20:44:37
+-- Versión del servidor: 10.1.19-MariaDB
+-- Versión de PHP: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -27,8 +25,6 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `modificaciones`
 --
-CREATE database bitacora;
-use bitacora;
 
 CREATE TABLE `modificaciones` (
   `id_commit` int(6) NOT NULL,
@@ -69,7 +65,7 @@ INSERT INTO `modificaciones` (`id_commit`, `codigo`, `titulo`, `autor`, `fecha`,
 --
 
 CREATE TABLE `modulo` (
-  `id_modulo` int(6) NOT NULL,
+  `id_modulos` int(6) NOT NULL,
   `nombre_modulo` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -77,7 +73,7 @@ CREATE TABLE `modulo` (
 -- Volcado de datos para la tabla `modulo`
 --
 
-INSERT INTO `modulo` (`id_modulo`, `nombre_modulo`) VALUES
+INSERT INTO `modulo` (`id_modulos`, `nombre_modulo`) VALUES
 (1, 'Modulo de Sesión'),
 (2, 'Modulo de Búsqueda'),
 (3, 'Modulo General');
@@ -117,7 +113,7 @@ ALTER TABLE `modificaciones`
 -- Indices de la tabla `modulo`
 --
 ALTER TABLE `modulo`
-  ADD PRIMARY KEY (`id_modulo`);
+  ADD PRIMARY KEY (`id_modulos`);
 
 --
 -- Indices de la tabla `prueba`
@@ -134,20 +130,16 @@ ALTER TABLE `prueba`
 --
 ALTER TABLE `modificaciones`
   MODIFY `id_commit` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
 --
 -- AUTO_INCREMENT de la tabla `modulo`
 --
 ALTER TABLE `modulo`
-  MODIFY `id_modulo` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
+  MODIFY `id_modulos` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `prueba`
 --
 ALTER TABLE `prueba`
   MODIFY `id_prueba` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

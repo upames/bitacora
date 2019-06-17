@@ -42,7 +42,7 @@ $prueba=utf8_decode($pruebas);
 
 if($prueba !=""){
 
-$consultas = "SELECT codigo,titulo,autor,nombre_prueba,nombre_modulo from modificaciones inner join modulo on modificaciones.id_modulo=modulo.id_modulo inner join prueba WHERE  modificaciones.id_prueba=prueba.id_prueba AND nombre_prueba='$prueba'";
+$consultas = "SELECT codigo,titulo,autor,nombre_prueba,nombre_modulo from modificaciones inner join modulo on modificaciones.id_modulo=modulo.id_modulos inner join prueba WHERE  modificaciones.id_prueba=prueba.id_prueba AND nombre_prueba='$prueba'";
 $respuestas= mysqli_query($conexion,$consultas)or die("Problemas en el select".mysqli_error($conexion));
 ?>
 <center> <table  class="tabla">
