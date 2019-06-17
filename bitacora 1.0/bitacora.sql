@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `modificaciones`
 --
+CREATE database bitacora;
+use bitacora;
 
 CREATE TABLE `modificaciones` (
   `id_commit` int(6) NOT NULL,
@@ -38,7 +40,7 @@ CREATE TABLE `modificaciones` (
   `salida` varchar(1000) DEFAULT NULL,
   `id_prueba` int(6) DEFAULT NULL,
   `id_modulo` int(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `modificaciones`
@@ -69,7 +71,7 @@ INSERT INTO `modificaciones` (`id_commit`, `codigo`, `titulo`, `autor`, `fecha`,
 CREATE TABLE `modulo` (
   `id_modulo` int(6) NOT NULL,
   `nombre_modulo` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `modulo`
@@ -89,7 +91,7 @@ INSERT INTO `modulo` (`id_modulo`, `nombre_modulo`) VALUES
 CREATE TABLE `prueba` (
   `id_prueba` int(6) NOT NULL,
   `nombre_prueba` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `prueba`
