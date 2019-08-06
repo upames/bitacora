@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
   </head>
   <body>
 	<link rel="stylesheet" href="estilo.css">
@@ -22,7 +24,12 @@ $conexion=mysqli_connect("localhost","root","","bitacora") or
         die("Problemas en la conexión");
         $respuesta= mysqli_query($conexion,$consulta)or die("Problemas en el select".mysqli_error($conexion));
 ?>
-<div id="productos">
+<form action="buscar.php" method="post">
+  <label> Buscar por fecha </label>
+	<input type="date" name="bucar" >
+  <input type="submit" name="guardar" value="Buscar">
+</form>
+<div id="mostrar">
  <center> <table class="table table-hover">
             <thead>
         <tr>
@@ -55,5 +62,6 @@ mysqli_close($conexion);
 ?>
 </table></center>
 </div>
+
 </body>
 </html>
