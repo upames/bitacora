@@ -3,34 +3,49 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilo2.css">
     <title></title>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container">
+         <div id="navbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="registrarBitacora.php">Registrar bitacora</a></li>
+              <li><a href="seleccionarUsuario.php">Bucar por autor</a></li>
+             <li><a href="seleccionarPrueba.php">Buscar por prueba</a></li>
+               <li><a href="registroProducto.php">Buscar por modulo</a></li>
+           </ul>
+         </div>
+       </div>
+     </nav>
 
+<div class="circuloPosicion">
    <div class="search-box">
        <a class="search-btn" href="seleccionarUsuario.php?e=1">
 
-         <img src="usuariod.png" height="50" width="50">
+
          <span class="phone">Erick</span>
        </a>
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
-       <a class="search-btn" href="seleccionarUsuario.php?n=2"><img src="usuariod.png" height="50" width="50"></a>
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
-       <br>
-         <a class="search-btn" href="seleccionarUsuario.php?d=3"><img src="usuariod.png" height="50" width="50"></a>
+
+       <a class="search-btn" href="seleccionarUsuario.php?n=2">
+
+         <span class="phone">Nestor</span>
+       </a>
+
+         <a class="search-btn" href="seleccionarUsuario.php?d=3">
+
+           <span class="phone">Dolores</span>
+         </a>
    </div>
-
-
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 <?php

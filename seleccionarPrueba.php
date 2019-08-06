@@ -3,9 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilo2.css">
+
+
   </head>
   <body>
-    <center> <table>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container">
+         <div id="navbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="registrarBitacora.php">Registrar bitacora</a></li>
+              <li><a href="seleccionarUsuario.php">Bucar por autor</a></li>
+             <li><a href="seleccionarPrueba.php">Buscar por prueba</a></li>
+               <li><a href="modulo.php">Buscar por modulo</a></li>
+           </ul>
+         </div>
+       </div>
+     </nav>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="circuloPosicion">
+    <div class="search-box">
 
     <?php
     $conexion=mysqli_connect("localhost","root","","bitacora") or
@@ -17,17 +35,23 @@
     while ($Datosprueba= mysqli_fetch_array($respuesta)) {
      ?>
 
-<tr>
-  <th>
-     <a href="seleccionarPrueba.php?prueba=<?php echo utf8_encode($Datosprueba[1]);  ?>"><?php  echo utf8_encode($Datosprueba[1]);  ?></a>
-  </th>
-</tr>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <a class="search-btn" href="seleccionarPrueba.php?prueba=<?php echo utf8_encode($Datosprueba[1]);  ?>"><?php  echo utf8_encode($Datosprueba[1]);  ?></a>&nbsp;&nbsp;&nbsp;
+
+
 
 
   <?php  } ?>
- </table></center>
 
 
+ </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
   </body>
@@ -46,6 +70,7 @@ $consultas = "SELECT codigo,titulo,autor,nombre_prueba,nombre_modulo from modifi
 $respuestas= mysqli_query($conexion,$consultas)or die("Problemas en el select".mysqli_error($conexion));
 ?>
 <center> <table  class="tabla">
+<thead>
   <tr>
     <th height="30" scope="col">Codigo</th>
     <th  height="30" scope="col">Titulo</th>
@@ -53,7 +78,7 @@ $respuestas= mysqli_query($conexion,$consultas)or die("Problemas en el select".m
     <th   height="30" scope="col">prueba</th>
     <th  height="20" scope="col">modulo</th>
    </tr>
-<tr><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr></tr>
+</thead>
 
 <?php
 
@@ -66,7 +91,6 @@ while ($DatosCommit= mysqli_fetch_array($respuestas)) {
        <td  height="30"><?php echo utf8_encode($DatosCommit[3]); ?></td>
        <td height="20"><?php echo utf8_encode($DatosCommit[4]); ?></td>
    </tr>
-  <tr><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr></tr>
 
 <?php } ?>
 </table></center>

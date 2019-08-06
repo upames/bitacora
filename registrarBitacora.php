@@ -3,17 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="estilo.css">
+      <link rel="stylesheet" href="estilo2.css">
   </head>
   <body>
-  <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="estilo2.css">
-      <nav>
-              <ul class="nav navbar-nav">
-                <li><a href="index.php">P&aacutegina Principal</a></li>
-                <li><a href="agregarUsuarioinfo.php">Registrar</a></li>
-                <li><a href="login.php">Iniciar sesi&oacuten</a></li>
-              </ul>
-        </nav>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container">
+         <div id="navbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="registrarBitacora.php">Registrar bitacora</a></li>
+              <li><a href="seleccionarUsuario.php">Bucar por autor</a></li>
+             <li><a href="seleccionarPrueba.php">Buscar por prueba</a></li>
+               <li><a href="registroProducto.php">Buscar por modulo</a></li>
+           </ul>
+         </div>
+       </div>
+     </nav>
 
 
  <form method="post" action="agregarBitacoraProcesa.php">
@@ -33,9 +40,9 @@
         $respuesta= mysqli_query($conexion,$consulta)or die("Problemas en el select".mysqli_error($conexion));
 
         mysqli_close($conexion);
-        
 
-        while ($pruebas= mysqli_fetch_array($respuesta)) 
+
+        while ($pruebas= mysqli_fetch_array($respuesta))
         {
           $valor=$pruebas['id_prueba'];
           $valor2=$pruebas['nombre_prueba'];
@@ -57,9 +64,9 @@
         $respuesta1= mysqli_query($conexion1,$consulta1)or die("Problemas en el select".mysqli_error($conexion1));
 
         mysqli_close($conexion1);
-        
 
-        while ($pruebas1= mysqli_fetch_array($respuesta1)) 
+
+        while ($pruebas1= mysqli_fetch_array($respuesta1))
         {
           $valor1=$pruebas1['id_modulo'];
           $valor12=$pruebas1['nombre_modulo'];

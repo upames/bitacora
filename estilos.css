@@ -14,22 +14,23 @@ body{
   font-family: Arial;
 }
 
-span.phone::before{
-  content: '\A';
-  white-space: pre-line;
-    text-align-last: inherit;
+.circuloPosicion{
+
+
+text-align: center;
+
+
 }
 
-
 .search-btn{
-  color: #e84118;
+  color: white;
   float:left;
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 100%;
   background: black;
-  display: flex;
-  justify-content: center;
+  display:inline-flex;
+  justify-content:center;
   align-items: center;
   text-decoration: none;
 
@@ -67,11 +68,11 @@ thead{
 }
 
 table td:hover{
-  background: green;
+  background: yellow;
   /*color: white;*/
 }
 table tr:hover{
-  background: green;
+  background: yellow;
   /*color: white;*/
 }
 table tr-h{
