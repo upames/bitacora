@@ -11,18 +11,19 @@
       <link rel="stylesheet" href="estilo2.css">
 
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-       <div class="container">
-         <div id="navbar" class="collapse navbar-collapse">
-           <ul class="nav navbar-nav">
-             <li><a href="registrarBitacora.php">Registrar bitacora</a></li>
-              <li><a href="seleccionarUsuario.php">Bucar por autor</a></li>
-             <li><a href="seleccionarPrueba.php">Buscar por prueba</a></li>
-               <li><a href="modulo.php">Buscar por modulo</a></li>
-           </ul>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container">
+           <div id="navbar" class="collapse navbar-collapse">
+             <ul class="nav navbar-nav">
+               <li><a href="registrarBitacora.php">Registrar bitacora</a></li>
+               <li><a href="fecha.php">Buscar por fecha</a></li>
+                <li><a href="seleccionarUsuario.php">Bucar por autor</a></li>
+               <li><a href="seleccionarPrueba.php">Buscar por prueba</a></li>
+                 <li><a href="modulo.php">Buscar por modulo</a></li>
+             </ul>
+           </div>
          </div>
-       </div>
-     </nav>
+       </nav>
 <?php
 $consulta = "SELECT * FROM modificaciones INNER JOIN modulo on modulo.id_modulos=modificaciones.id_modulo where id_modulo=2";
 $conexion=mysqli_connect("localhost","root","","bitacora") or

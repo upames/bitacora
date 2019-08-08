@@ -8,14 +8,21 @@
   </head>
   <body>
 	<link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="estilos.css">
   	<link rel="stylesheet" href="estilo2.css">
-      <nav>
-      				<ul class="nav navbar-nav">
-                <li><a href="index.php">P&aacutegina Principal</a></li>
-                <li><a href="agregarUsuarioinfo.php">Registrar</a></li>
-      					<li><a href="login.php">Iniciar sesi&oacuten</a></li>
-      				</ul>
-      	</nav>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container">
+         <div id="navbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="registrarBitacora.php">Registrar bitacora</a></li>
+             <li><a href="fecha.php">Buscar por fecha</a></li>
+              <li><a href="seleccionarUsuario.php">Bucar por autor</a></li>
+             <li><a href="seleccionarPrueba.php">Buscar por prueba</a></li>
+               <li><a href="modulo.php">Buscar por modulo</a></li>
+           </ul>
+         </div>
+       </div>
+     </nav>
 <?php
 
 $consulta = "SELECT * FROM modificaciones";
