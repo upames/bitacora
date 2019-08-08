@@ -25,12 +25,25 @@
      </div>
    </nav>
 
-        <div class="row">
-           <div id="content" class="col-lg-12">
-               <button><a href="mod1.php">Modulo sesion</a></button>
-               <button><a href="mod2.php">Modulo busqueda</a></button>
-               <button><a href="mod3.php">Modulo general</a></button>
-           </div>
-       </div>
+   <div class="circuloPosicion">
+      <div class="search-box">
+          <a class="search-btn" href="mod1.php">
+
+
+            <span class="phone">Modulo sesion</span>
+          </a>
+
+          <a class="search-btn" href="mod2.php">
+
+            <span class="phone">Modulo busqueda</span>
+          </a>
+
+            <a class="search-btn" href="mod3.php">
+
+              <span class="phone">Modulo general</span>
+            </a>
+      </div>
+   </div>
+
 </body>
 </html>
